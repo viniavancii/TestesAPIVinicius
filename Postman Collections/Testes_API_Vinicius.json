@@ -1,0 +1,913 @@
+{
+  "info": {
+    "_postman_id": "6c8497b8-22f3-45fa-9102-aa3085ced8e3",
+    "name": "API Vinicius",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Leads",
+      "item": [
+        {
+          "name": "POST - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "E-mail não preenchido",
+              "_postman_id": "76a32798-0f7c-41d4-9169-a6fc01a6848a",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "E-mail inválido",
+              "_postman_id": "26f9de6e-defe-4f9f-9868-81e309985b48",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "E-mail já cadastrado",
+              "_postman_id": "a671804d-e51a-4300-a414-0e5c184d0d9c",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a@a.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação inválida",
+              "_postman_id": "7052e8ec-5106-4a32-9b47-3e6d01adb184",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a@a.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "URL inválida",
+              "_postman_id": "a38a1755-b71a-4123-bacc-78cccdd0a9ae",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a@a.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}lead"
+              },
+              "response": []
+            },
+            {
+              "name": "Confidence score inválido",
+              "_postman_id": "cb51c4bd-32eb-4c07-b55b-4866ddd55e03",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"alex@reddit.com\",\r\n    \"confidence_score\": 101\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "Website inválido",
+              "_postman_id": "2bcac57e-a519-4087-b195-cafc19163c1f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"alex@reddit.com\",\r\n    \"website\": \"a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "Country Code inválido",
+              "_postman_id": "384d7bfa-f158-4846-9574-de81257875e9",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"alex@reddit.com\",\r\n     \"country_code\": 10\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            },
+            {
+              "name": "Twitter inválido",
+              "_postman_id": "08ab268a-fcfc-4998-afd4-04846e102d8b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"alex@reddit.com\",\r\n    \"twitter\": -1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "87efb3d6-42f6-40a5-89d6-b3573acf0eca",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "GET - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "Retornar todos os Leads",
+              "item": [
+                {
+                  "name": "URL inválida",
+                  "_postman_id": "8a6fb186-2189-4890-8477-cba4b9978e23",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}lead"
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Autenticação inválida",
+                  "_postman_id": "21554d69-af65-4d5b-9e42-61138f1b4bdc",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}leads"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "17c60fbf-6924-4a24-8462-593c1c4f7a0f",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Retornar Lead Especifico",
+              "item": [
+                {
+                  "name": "Usuário inexistente",
+                  "_postman_id": "2e9692b3-823a-4ff7-b81d-c527d81c6160",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}leads/1"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "17129ce3-3292-4a49-8ba2-a8bec3bd171b",
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_id": "d9ecc28c-a2c6-449d-b624-50d4c3d0ce0c",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "PUT - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "URL Inválida",
+              "_postman_id": "ca527b29-8e9e-4dab-9bc3-d54080e6e245",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"position\": \"\",\r\n    \"company\": \"\",\r\n    \"company_industry\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação Inválida",
+              "_postman_id": "e385ec91-957e-455e-8786-68f97f28d351",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"position\": \"\",\r\n    \"company\": \"\",\r\n    \"company_industry\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84631552"
+              },
+              "response": []
+            },
+            {
+              "name": "Usuário inexistente",
+              "_postman_id": "c9341fcf-525d-40f3-b3bd-76a202125674",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"position\": \"\",\r\n    \"company\": \"\",\r\n    \"company_industry\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/1"
+              },
+              "response": []
+            },
+            {
+              "name": "E-mail incorreto",
+              "_postman_id": "54d01118-1562-47ae-82d2-ef0f104b3323",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"a@a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "E-mail não preenchido",
+              "_postman_id": "f8956614-1d6f-4436-936a-2a55942caebe",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"\",\r\n    \"first_name\": \"\",\r\n    \"last_name\": \"\",\r\n    \"position\": \"\",\r\n    \"company\": \"\",\r\n    \"company_industry\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "Website inválido",
+              "_postman_id": "be24a824-05f0-4269-839d-7ddac590c015",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"alexisaaddaa@reddit.com\",\r\n  \"website\": \"redditcom\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "Confidence Score inválido",
+              "_postman_id": "6960f5d7-ac67-4ef3-891b-2329dbc5dd21",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"alexisaaddaa@reddit.com\",\r\n  \"confidence_score\": 101\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "Country Code inválido",
+              "_postman_id": "6bbb9d95-a416-4625-a6b2-fe3bf6d83e3d",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"alex@reddit.com\",\r\n  \"country_code\": -1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "Twitter Inválido",
+              "_postman_id": "f7ed1e53-7155-49bf-ae9e-f31e0183f7bc",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"email\": \"alex@reddit.com\",\r\n  \"twitter\": -1\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "cdccc7a3-c0d3-48b7-adc6-6d52bd6a25b9",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "DELETE - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "URL inválida",
+              "_postman_id": "93c0d2dd-9bf9-44dc-a3c3-ab5d79c0b944",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}lead"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação inválida",
+              "_postman_id": "d8f2c9bc-c743-4e9a-a463-facd75dfd9ac",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads/84592042"
+              },
+              "response": []
+            },
+            {
+              "name": "Usuário inexistente",
+              "_postman_id": "71c0e701-f526-4aab-be4a-e20b10418d0f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads/1"
+              },
+              "response": []
+            },
+            {
+              "name": "Sem ID",
+              "_postman_id": "1f239142-b8b3-49da-9dcb-1432d50a5158",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads/"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "6de1d02f-e0bc-484b-bac1-9e0c9f889e2d",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "b5a59053-f93e-4ab0-b2fc-2542e5f0f2fd"
+    },
+    {
+      "name": "Leads_Lists",
+      "item": [
+        {
+          "name": "POST - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "URL Inválida",
+              "_postman_id": "f0728a8f-38aa-4158-a07e-cd7b0ade452b",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_list"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação Inválida",
+              "_postman_id": "cdbfdb26-77f7-4ceb-a388-61e97944f5fd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists"
+              },
+              "response": []
+            },
+            {
+              "name": "Lista já cadastrada",
+              "_postman_id": "43b6cb05-cb01-46ed-b2af-6412bc7caf95",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"@\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists"
+              },
+              "response": []
+            },
+            {
+              "name": "Sem nome Lista",
+              "_postman_id": "56725db4-b13c-41fe-8ef5-373b0684b3c7",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "1be2bd74-48da-4091-8dc8-b27ba05a5770",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "GET - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "Retornar todas as Listas",
+              "item": [
+                {
+                  "name": "URL inválida",
+                  "_postman_id": "3e48811d-36ea-45e3-981d-8f9f63295d95",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}leads_list"
+                  },
+                  "response": []
+                },
+                {
+                  "name": "Autenticação inválida",
+                  "_postman_id": "1c24d82d-3cd1-4beb-8561-684961eda914",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "auth": {
+                      "type": "noauth"
+                    },
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}leads_lists"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "f2df9897-d126-4072-a0cf-7c845047b93b",
+              "_postman_isSubFolder": true
+            },
+            {
+              "name": "Retornar Lista Especifica",
+              "item": [
+                {
+                  "name": "Lista inexistente",
+                  "_postman_id": "b2144ae6-1a6b-40b4-ae73-0a895c46b175",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{url_base}}leads_lists/1"
+                  },
+                  "response": []
+                }
+              ],
+              "_postman_id": "ff2d7a0d-ca0e-49d4-b60b-c0d57c9531c3",
+              "_postman_isSubFolder": true
+            }
+          ],
+          "_postman_id": "5ae81602-4c31-40ab-a43b-4650c9fed24e",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "PUT - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "URL inválida",
+              "_postman_id": "f420befb-90a3-40e8-a163-861824ef38dd",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"New leads list name\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_list"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação inválida",
+              "_postman_id": "b0962ef9-f7c6-4ba9-8542-f58c91c0f3b2",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"New leads list name\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists/3188305"
+              },
+              "response": []
+            },
+            {
+              "name": "Lista inexistente",
+              "_postman_id": "593e19a7-3109-4699-902a-10fdd487ff3f",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"New leads list name\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists/3"
+              },
+              "response": []
+            },
+            {
+              "name": "Sem nome Lista",
+              "_postman_id": "1586203c-64e2-4b0a-ad63-4fd0512b9ef0",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"name\": \"\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{url_base}}leads_lists/3188305"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "714b2d43-8dda-4617-ad20-7e619e462de9",
+          "_postman_isSubFolder": true
+        },
+        {
+          "name": "DELETE - Caminhos Alternativos",
+          "item": [
+            {
+              "name": "URL inválida",
+              "_postman_id": "e60c3f66-5d4f-4b3b-af38-d18bbb6749ab",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads_list"
+              },
+              "response": []
+            },
+            {
+              "name": "Autenticação inválida",
+              "_postman_id": "f0dc7a12-2383-41bb-b1da-3eee43e08dda",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "noauth"
+                },
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads_lists/3188305"
+              },
+              "response": []
+            },
+            {
+              "name": "Lista Inexistente",
+              "_postman_id": "c88d81cd-929c-4d41-9df1-6b65e083d119",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads_lists/3"
+              },
+              "response": []
+            },
+            {
+              "name": "Sem ID Lista",
+              "_postman_id": "7e596de4-bfe9-4c58-9f8b-969348153823",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": "{{url_base}}leads_lists/"
+              },
+              "response": []
+            }
+          ],
+          "_postman_id": "c6ea98d4-8952-4ef5-a51f-14d5eb7aa6cd",
+          "_postman_isSubFolder": true
+        }
+      ],
+      "_postman_id": "d356cc45-c8ad-4a7a-bcab-7ed266637944"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": {
+      "in": "query",
+      "value": "c693e8ab9b83e7379f0b8adde7ef7a893ae08723",
+      "key": "api_key"
+    }
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "4dd6236b-2911-40a6-a198-10bbc80ca3e6",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "afb9cfa2-bf6e-4493-8026-d0bfb763f90a",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
+}
